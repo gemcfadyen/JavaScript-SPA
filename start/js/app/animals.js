@@ -1,9 +1,9 @@
  /* data folder has a list of animals - which represents the 'database' */
- define(["lib/route", "lib/html", "lib/http", "lib/render"], function (route, html, http, render) {
+ define(["lib/route", "lib/html", "lib/http", "lib/render", "app/addAnimal"], function (route, html, http, render, addAnimal) {
 
      var handlers = {
          add: function () {
-             alert("Not implemented yet");
+            addAnimal();
          }
      };
 

@@ -1,9 +1,22 @@
 /* You dont want to edit bootstrap.css . Add custom parts here. This overrides bootstap.css */
-body {
-  padding-top: 50px;
-}
 
+body {
+    padding-top: 50px;
+}
 /* Hide template elements */
+
 [data-repeat] {
-  display: none;  /* any element that has the data-repeat attribute should be hidden - ie hide the handlebar syntax */
+    display: none;
+    /* any element that has the data-repeat attribute should be hidden - ie hide the handlebar syntax */
+}
+#overlay {
+    /* shades out the screen when a pop up box arises */
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; /* size of entired document */
+    height: 100%;
+    z-index: 1050;  /* navbar is at 1030 so navbar will be covered */
+    background-color: rgba(0, 0, 0, 0.75); /* red green blue alpha */
 }

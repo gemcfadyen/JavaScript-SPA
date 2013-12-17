@@ -166,6 +166,9 @@ Navigation bars can be added to the top/bottom of the page with different styles
 The top one is a good way of being able to navigate back to the home page.
 The bottom one is good way of grouping actions
 
+http://getbootstrap.com/javascript/#modals  
+Clicking a button makes background go dark with a pop up box appearing
+
 JSON
 ----
 Javascript Object Notation
@@ -197,3 +200,7 @@ ul vs ol
 --------
 unordered list - displays as bullet points
 ol ordered list - displays as numbers
+
+Mozilla Developer Environment
+-----------------------------
+developer.mozilla.org is a good trouble shooting page
