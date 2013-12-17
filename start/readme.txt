@@ -121,6 +121,10 @@ It uses phantom JS which is a web browser kit. It has an in memory representatio
 
 Test files should be named classSpec.js
 
+To run the tests do
+> karma start
+and observe the output
+
 
 JavaScript Minimisers
 ---------------------
@@ -176,3 +180,7 @@ Taking handlebar string and generates a function on the fly which you can then c
 very lightweight. No code which manipulates the dom. you give it a template and it will provide an object with the filled out template.
 
 Integrating templates into HTML Partials.
+
+JS Performance
+--------------
+jsperf.com

@@ -5,5 +5,5 @@ body {
 
 /* Hide template elements */
 [data-repeat] {
-  display: hidden;  <!-- any element that has the data-repeat attribute should be hidden - ie hide the handlebar syntax -->
+  display: none;  <!-- any element that has the data-repeat attribute should be hidden - ie hide the handlebar syntax -->
 }
