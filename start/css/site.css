@@ -1,8 +1,9 @@
+<!-- You dont want to edit bootstrap.css . Add custom parts here. This overrides bootstap.css -->
 body {
   padding-top: 50px;
 }
 
 /* Hide template elements */
 [data-repeat] {
-  display: hidden;
+  display: hidden;  <!-- any element that has the data-repeat attribute should be hidden - ie hide the handlebar syntax -->
 }

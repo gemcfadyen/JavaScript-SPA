@@ -23,6 +23,10 @@ To list out the global downloads
 > node list -g
 > node list -g | grep karma
 
+If you delete your local node-modules folder, you can do 
+> npm install 
+to recreate it from the global cache.
+
 Folder Structure
 -----------------
 Under the js folder, typically there are three folders
@@ -150,3 +154,25 @@ Devised by Twitter.
 
 SAS super awesome stylesheets.
 COMPASS - completly awesome style sheets written in Ruby
+
+JSON
+----
+Javascript Object Notation
+JS has an eval function to run the text you pass in using the current JS context.
+This can lead to a JSON injection attack - you could manipulate the json and cause a security attack.
+Eval should not be used therfore. It is to vulnerable and open to attack.
+In the browser JSON.parse takes json and turns it into JS object.
+JSON.stringify takes an object and turns it to JSON.
+
+SugarFill
+---------
+Adds syntatic sugar to the JS 
+
+doT
+---
+https://github.com/olado/doT  - templating engine.
+
+Taking handlebar string and generates a function on the fly which you can then call with your data object. it returns the formatted string which you can then inject into your dom. 
+very lightweight. No code which manipulates the dom. you give it a template and it will provide an object with the filled out template.
+
+Integrating templates into HTML Partials.
