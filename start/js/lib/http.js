@@ -4,6 +4,10 @@ define(["vendor/q"], function (Q) {
         var request = new XMLHttpRequest(); /* XHR */
 
         request.open(method, url);
+        if(method[0] === "P"){
+            request.setRequestHeader("Content-Type", "application/json");
+        }
+        
 
         request.onload = function () { /* request.addEventListener(onload) is an alternative way of defining this */
             if (request.status > 199 && request.status < 300) {

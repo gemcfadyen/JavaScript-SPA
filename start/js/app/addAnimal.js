@@ -1,4 +1,4 @@
-define(["lib/modal"], function (modal) {
+define(["lib/modal", "lib/http"], function (modal, http) {
 
     function setup(element) {
         var closers = element.querySelectorAll("[data-dismiss]");
@@ -17,7 +17,10 @@ define(["lib/modal"], function (modal) {
                 obj[id] = input.value;
             }
             
-            alert(JSON.stringify(obj));
+            http("POST", "/animals", JSON.stringify(obj)).then(
+                function(){
+                    modal.hide();
+                });
         });
     }
 

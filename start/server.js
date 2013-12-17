@@ -5,6 +5,7 @@ var data = require("./data");
 
 var app = express();
 app.use(express.logger());
+app.use(express.bodyParser());
 app.use("/css", express.static(__dirname + "/css"));
 app.use("/html", express.static(__dirname + "/html"));
 app.use("/js", express.static(__dirname + "/js"));
@@ -39,7 +40,20 @@ app.get("/animals/:id", function(req,res) {
     } else {
       res.send(data);
     }
-  })
+  });
+});
+
+app.post("/animals", function(req,res) {
+  var animal = req.body;
+  data.add("animals", animal, function(err, data) {
+    if (err) {
+      res.send(500);
+    } else {
+      res.status(201); //http status code for creatd
+      res.set("Location", "/animals/" + animal.id);
+      res.send(data);
+    }
+  });
 });
 
 app.listen(3000);
