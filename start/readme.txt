@@ -159,6 +159,13 @@ Devised by Twitter.
 SAS super awesome stylesheets.
 COMPASS - completly awesome style sheets written in Ruby
 
+http://getbootstrap.com/components/#navbar 
+Navigation bars can be added to the top/bottom of the page with different styles - default (black for yeti theme) or inverse (blue for Yeti theme).
+<nav class="navbar navbar-default navbar-fixed-bottom">
+
+The top one is a good way of being able to navigate back to the home page.
+The bottom one is good way of grouping actions
+
 JSON
 ----
 Javascript Object Notation
@@ -184,3 +191,9 @@ Integrating templates into HTML Partials.
 JS Performance
 --------------
 jsperf.com
+
+
+ul vs ol
+--------
+unordered list - displays as bullet points
+ol ordered list - displays as numbers
