@@ -17,7 +17,7 @@ define(["lib/route"], function (route) {
             addEventListener: function (e, fn) {
                 on.hashchange = fn;
             }
-        }
+        };
     }
 
     describe("the route module", function () {
@@ -31,7 +31,7 @@ define(["lib/route"], function (route) {
         route("/animals/{id}", function (id) {
             called = "/animals/{id}";
             idValue = id;
-        })
+        });
 
         it("should resolve the id parametr", function () {
             called = undefined;
