@@ -214,6 +214,23 @@ Binding object properties to form elements and handling change event on form ele
 
 Running the zoo app
 -------------------
+
+3 day course covered :-
+-----------------------
+SPA Routing
+HTTP
+Rendering
+2 way Binding of forms to program objects
+Modal Dialogs
+Validation
+
+off the shelf tools:-
+---------------------
+Modules - requirejs solution to load the parts we need when we need them
+Testing - jasmine for writing tests and karma to run them in the background and dom related components  without loading them into the browser
+Templating - wrapped our rendering around templating (doT)
+
+
 To launch the zoo
 > node start
 Navigate to your browser and type 

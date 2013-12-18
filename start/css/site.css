@@ -9,6 +9,13 @@ body {
     display: none;
     /* any element that has the data-repeat attribute should be hidden - ie hide the handlebar syntax */
 }
+
+/* all error messages in red - when mandatory text not filled in for example */
+.error {
+    font-size:0.8em;
+    color: red;
+}
+
 #overlay {
     /* shades out the screen when a pop up box arises */
     visibility: hidden;

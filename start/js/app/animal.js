@@ -1,4 +1,4 @@
-define(["lib/route", "lib/html", "lib/http", "lib/observable", "lib/bind"], function (route, html, http, observable, bind) {
+define(["lib/route", "lib/html", "lib/http", "lib/observable", "lib/bind", "lib/validate"], function (route, html, http, observable, bind, validate) {
     var _id, _animal;
     var handlers = {
         back: function() {
@@ -23,6 +23,7 @@ define(["lib/route", "lib/html", "lib/http", "lib/observable", "lib/bind"], func
                 e.preventDefault();
                 save();
             });
+            validate.init(form);
         });
         
         bind.handlers(element, handlers);
