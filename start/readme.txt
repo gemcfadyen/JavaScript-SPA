@@ -217,7 +217,7 @@ Running the zoo app
 
 3 day course covered :-
 -----------------------
-SPA Routing
+SPA Routing - for all the pages after the #
 HTTP
 Rendering
 2 way Binding of forms to program objects
@@ -234,8 +234,46 @@ Templating - wrapped our rendering around templating (doT)
 To launch the zoo
 > node start
 Navigate to your browser and type 
-localhostL:3000 to display the home page
+localhost:3000 to display the home page
 
 To run the tests do 
 > karma start
 test will run in the background
+
+
+Other libraries for Web development
+-----------------------------------
+KnockoutJS - Javascript implementation of 'model view - view model' pattern http://knockoutjs.com/
+view binds to things on the view model
+seperation of data and logic.
+It is unidirectional eg:
+
+view                 ------>    vm                                        -------->       model
+field bound to Name             property name get { return model.Name; }
+
+The tutorial pages are v.good http://learn.knockoutjs.com/#/?tutorial=intro
+
+Can be used with other libraries - sammyjs.org , davis.js
+
+To talk to back end data - www.breezejs.com
+durandaljs.com - has knockout at the core of it. It is built on requirejs.
+
+Angular - has an idea of scope.
+
+jsfiddle.net
+
+http://www.w3.org/TR/components-intro/ - web components
+mozilla.github.io/brick  
+http://mozilla.github.io/brick/docs.html  - has effects like flipping, deck of cards, calendars etc. Looks cool.
+
+polymer-project.org/getting-started.html - still in early stages
+
+Languages that compile to JS
+----------------------------
+CoffeeScript - Gives JS the look of Ruby/Python so people who do not like the JS syntax sometimes use CoffeeScript.
+The code in the browser (JS) has little to do with the code you have written in CoffeeScript so can be confusing to debug if you are stepping through. Can be compiled in browser .coffee files.
+
+TypeScript - Microsoft open source MIT licensed hosted on codeplex. In the stages of becoming a standard. Cant be compiled in the browser. Needs a pre-compile step.
+
+Dart - compiles to byte code, which is then interpreted in the browser. Dart2js is a dart to JS compiler. What it produces is not recognisably JS. dart.js runtime has to be downloaded and sit on top.
+
