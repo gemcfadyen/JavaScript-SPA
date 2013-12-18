@@ -1,18 +1,28 @@
  /* data folder has a list of animals - which represents the 'database' */
  define(["lib/route", "lib/html", "lib/http", "lib/render", "app/addAnimal"], function (route, html, http, render, addAnimal) {
 
+     var _element, _animals;
+
      var handlers = {
          add: function () {
-            addAnimal();
+             addAnimal().then(function (newAnimal) {
+                 if (newAnimal) {
+                     _animals.items.push(JSON.parse(newAnimal));
+                     render.update(_element, {
+                         animals: _animals.items
+                     }); // {keyed list of things}
+                 }
+             });
          }
      };
 
      function _render(element) {
+         _element = element;
          http("GET", "/animals").then( // when the http returns then
              function (json) {
-                 var animals = JSON.parse(json); /* turns JSON into a real object */
+                 _animals = JSON.parse(json); /* turns JSON into a real object */
                  render.repeaters(element, {
-                     animals: animals.items
+                     animals: _animals.items
                  });
              },
              function (error) {
@@ -26,7 +36,7 @@
 
          for (var i = clickables.length - 1; i >= 0; i--) {
              var functionName = clickables[i].attributes["data-click"].value;
-             if(handlers[functionName]){
+             if (handlers[functionName]) {
                  clickables[i].addEventListener("click", handlers[functionName]);
              }
          }

@@ -18,8 +18,8 @@ define(["lib/modal", "lib/http"], function (modal, http) {
             }
             
             http("POST", "/animals", JSON.stringify(obj)).then(
-                function(){
-                    modal.hide();
+                function(newAnimal){
+                    modal.hide(newAnimal);
                 });
         });
     }
@@ -31,6 +31,7 @@ define(["lib/modal", "lib/http"], function (modal, http) {
                 alert(error);
             }
         );
+        return modal.promise;
     }
 
     return addAnimal;

@@ -57,6 +57,8 @@ Browsers
 -------
 To display developer tools on Chrome F12
 To display developer tools on IE F12
+To go into debug mode - hit F12, navigate to Source tab, click the enable breakpoint icon (looks like a right arrow)
+Add breakpoints by clicking on line numbers of the source. You can then navigate through step by step.
 
 
 Books
@@ -205,3 +207,6 @@ Mozilla Developer Environment
 -----------------------------
 developer.mozilla.org is a good trouble shooting page
 
+Two way data binding
+--------------------
+Binding object properties to form elements and handling change event on form elements ie update objects
