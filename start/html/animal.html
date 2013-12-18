@@ -3,7 +3,8 @@
         <form id="animal" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" class="form-control">
+                <input type="text" id="name" class="form-control" required> <!-- required means madatory field - if you save without value it will say 'you must fill this box out -->
+                <span class="error" data-for="name:required">Name Is Required</span>
             </div>
             <div class="form-group">
                 <label for="species">Species</label>

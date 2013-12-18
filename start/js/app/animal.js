@@ -1,5 +1,10 @@
 define(["lib/route", "lib/html", "lib/http", "lib/observable", "lib/bind"], function (route, html, http, observable, bind) {
     var _id, _animal;
+    var handlers = {
+        back: function() {
+            window.location = "#/animals"; //where you want to go back to on the back button
+        }
+    }
     
     function save(){
         http("PUT", "/animals", JSON.stringify(_animal));
@@ -19,6 +24,8 @@ define(["lib/route", "lib/html", "lib/http", "lib/observable", "lib/bind"], func
                 save();
             });
         });
+        
+        bind.handlers(element, handlers);
     }
 
     //parameter comes into the routing system which we store in a shared variable

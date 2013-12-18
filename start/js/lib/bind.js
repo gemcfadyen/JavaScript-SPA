@@ -31,9 +31,21 @@ define([], function () {
             bindElement(inputs[i], data);
         }
     }
+    
+    function bindHandlers(element, handlers) {
+     var clickables = element.querySelectorAll("[data-click]"); //get all the elements with a data-click attribute
+
+         for (var i = clickables.length - 1; i >= 0; i--) {
+             var functionName = clickables[i].attributes["data-click"].value;
+             if (handlers[functionName]) {
+                 clickables[i].addEventListener("click", handlers[functionName]);
+             }
+         };
+    }
 
 
     return {
-        form: bindForm
+        form: bindForm,
+        handlers: bindHandlers
     };
 });

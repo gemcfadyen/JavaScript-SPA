@@ -210,3 +210,15 @@ developer.mozilla.org is a good trouble shooting page
 Two way data binding
 --------------------
 Binding object properties to form elements and handling change event on form elements ie update objects
+
+
+Running the zoo app
+-------------------
+To launch the zoo
+> node start
+Navigate to your browser and type 
+localhostL:3000 to display the home page
+
+To run the tests do 
+> karma start
+test will run in the background
