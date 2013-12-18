@@ -9,6 +9,13 @@ define(["lib/bind", "lib/observable"], function (bind, observable) {
             return div.firstChild;
         }
         
+         it("should initialize the form with object values", function () {
+            var form = makeForm();
+            var data = observable.wrap({ name: "Rafiki" });
+            bind.form(form, data);
+            expect(form.name.value).toEqual("Rafiki");
+        });
+        
         it("should update form with object changes", function () {
             var form = makeForm();
             var data = observable.wrap({ name: "" });

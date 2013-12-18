@@ -1,6 +1,10 @@
 define([], function () {
 
     function bindElement(element, data) {
+        if(data[element.id]) {
+            element.value = data[element.id];
+        }
+        
         element.addEventListener("change", function () {   //look for the change event
             data[element.id] = element.value;
         });

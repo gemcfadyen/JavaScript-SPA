@@ -23,7 +23,7 @@ function all(type, callback) {
             return;
         }
         files = files.filter(isJson).map(function (file) {
-            return dir + "/" + file
+            return dir + "/" + file;
         });
         if (files.length === 0) {
             callback(null, []);
@@ -31,7 +31,7 @@ function all(type, callback) {
         }
         async.map(files, loadRecord, function (err, data) {
             callback(err, data);
-        })
+        });
     });
 }
 
@@ -46,8 +46,15 @@ function add(type, data, callback) {
     fs.writeFile(file, JSON.stringify(data), callback);
 }
 
+function update(type, data, callback){
+    var file = __dirname + "/data/" + type + "/" + data.id + ".json";
+    
+    fs.writeFile(file, JSON.stringify(data), callback);
+}
+
 module.exports = {
     all: all,
     get: get,
-    add: add
+    add: add,
+    update: update
 };

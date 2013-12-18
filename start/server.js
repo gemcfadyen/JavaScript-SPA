@@ -56,4 +56,16 @@ app.post("/animals", function(req,res) {
   });
 });
 
+app.put("/animals", function(req, res){
+   var animal = req.body;
+    data.update("animals", animal,
+               function(err, data){
+                   if(err){
+                       res.send(500);
+                   } else{
+                       res.send(200);
+                   }
+               });
+});
+
 app.listen(3000);
