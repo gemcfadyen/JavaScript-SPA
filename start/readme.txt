@@ -57,9 +57,10 @@ Browsers
 -------
 To display developer tools on Chrome F12
 To display developer tools on IE F12
-To go into debug mode - hit F12, navigate to Source tab, click the enable breakpoint icon (looks like a right arrow)
+To go into glim mode - hit F12, navigate to Source tab, click the enable breakpoint icon (looks like a right arrow)
 Add breakpoints by clicking on line numbers of the source. You can then navigate through step by step.
 
+In IE you can profile the application by hitting F12 and navigating to the profiler tab. You can hit start profiler, then navigate throughtout your pages, then stop profiling. It will then show you an analysis of the results.
 
 Books
 -----
@@ -126,6 +127,8 @@ Test files should be named classSpec.js
 To run the tests do
 > karma start
 and observe the output
+
+// have observed that you can add a new animal with blank name and species - it will generate a new json file andshow a blank bullet point.
 
 
 JavaScript Minimisers
@@ -273,7 +276,7 @@ Languages that compile to JS
 CoffeeScript - Gives JS the look of Ruby/Python so people who do not like the JS syntax sometimes use CoffeeScript.
 The code in the browser (JS) has little to do with the code you have written in CoffeeScript so can be confusing to debug if you are stepping through. Can be compiled in browser .coffee files.
 
-TypeScript - Microsoft open source MIT licensed hosted on codeplex. In the stages of becoming a standard. Cant be compiled in the browser. Needs a pre-compile step.
+TypeScript - Microsoft open source MIT licensed hosted on codeplex. In the stages of becoming a standard. Cant be compiled in the browser. Needs a pre-compile step. Best not used for tests. Keep tests in the dynamic JS language.
 
 Dart - compiles to byte code, which is then interpreted in the browser. Dart2js is a dart to JS compiler. What it produces is not recognisably JS. dart.js runtime has to be downloaded and sit on top.
 
