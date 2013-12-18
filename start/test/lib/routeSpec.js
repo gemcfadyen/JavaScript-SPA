@@ -51,8 +51,7 @@ define(["lib/route"], function (route) {
             called = undefined;
             var win = makeWindow("");
             route.run(win);
-            expect(win.location.href).toEqual("http://batterseap
-                                              arkzoo.org/#/");
+            expect(win.location.href).toEqual("http://batterseaparkzoo.org/#/");
         });
     });
 
